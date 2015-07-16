@@ -7,6 +7,10 @@ MAINTAINER Chris Fordham <chris@fordham-nagy.id.au>
 # $ docker run -it countdown_example
 #    or detached:
 #       $ docker run -itd -p 8800:80 countdown_example
+#
+# tag and push
+# $ docker tag countdown_example flaccid/countdown_example
+# $ docker push flaccid/countdown_example
 
 COPY src /src
 WORKDIR /src
