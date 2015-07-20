@@ -17,3 +17,7 @@ Run:
 Or, detached:
 
     $ docker run -itd -p 8800:80 countdown_example
+
+#### Rancher Compose
+
+    $ rancher-compose up --project-Name Default -d
