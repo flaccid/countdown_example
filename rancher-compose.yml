@@ -2,7 +2,5 @@ countdown-lb:
   scale: 1
   load_balancer_config:
     name: countdown-lb config
-#countdown-v1:
-#  scale: 2
 countdown-v2:
   scale: 2

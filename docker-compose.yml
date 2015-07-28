@@ -1,21 +1,13 @@
 countdown-lb:
   ports:
-  - 8000:80/tcp
-  tty: true
+  - 8000:80
+  labels:
+    - "io.rancher.scheduler.affinity:host_label=lb=true"
+    - "io.rancher.loadbalancer.target.countdown-v2=80"
   image: rancher/load-balancer-service
   links:
-  - countdown-v2
-  stdin_open: true
-#countdown-v1:
-#  ports:
-#  - 80/tcp
-#  restart: 'no'
-#  tty: true
-#  image: flaccid/countdown_example:v1
-#  stdin_open: true
+  - countdown-v2:countdown-v2
 countdown-v2:
-  ports:
-  - 80/tcp
   restart: 'no'
   tty: true
   image: flaccid/countdown_example:v2
