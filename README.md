@@ -20,4 +20,10 @@ Or, detached:
 
 #### Rancher Compose
 
-    $ rancher-compose up --project-Name Default -d
+Create and up:
+
+    $ rancher-compose --project-name countdown-demo up -d
+
+Remove:
+
+    $ rancher-compose --project-name countdown-demo rm -f
