@@ -12,14 +12,17 @@ Build:
 
 Run:
 
-    $ docker run -it countdown_example
+    $ docker run -p 8080:80 countdown_example
 
 Or, detached:
 
-    $ docker run -itd -p 8800:80 countdown_example
+    $ docker run --d -p 8080:80 countdown_example
 
 #### Rancher Compose
 
+<<<<<<< HEAD
+    $ rancher-compose up --project-name Default -d
+=======
 Create and up:
 
     $ rancher-compose --project-name countdown-demo up -d
@@ -27,3 +30,4 @@ Create and up:
 Remove:
 
     $ rancher-compose --project-name countdown-demo rm -f
+>>>>>>> 2bb9c508a5c82b40b072bdcfcf7098d9cf6df7f4
